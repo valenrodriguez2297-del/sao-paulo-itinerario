@@ -6,7 +6,6 @@
 <title>São Paulo · Itinerario de Viaje</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root {
     --verde: #1a6b4a;
@@ -265,6 +264,31 @@
   .tag-shopping { background: #f3e8ff; color: #6b21a8; }
   .tag-bar { background: #fff7ed; color: #9a3412; }
 
+  /* GOOGLE MAPS BUTTON */
+  .stop-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .gmaps-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #1a73e8;
+    background: #e8f0fe;
+    border-radius: 20px;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: background 0.18s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .gmaps-btn:hover { background: #d2e3fc; transform: translateY(-1px); }
+
   /* TIPS */
   .tips-box {
     background: #fffbeb;
@@ -354,7 +378,10 @@
           <div class="stop-time">8:00 AM · Desayuno</div>
           <div class="stop-name">Good Market</div>
           <div class="stop-note">Café con ambiente y opciones veganas en Jardins. Avocado toast, jugos frescos y el mejor flat white para arrancar el día con energía.</div>
-          <span class="stop-tag tag-food">🥑 Vegano-friendly</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-food">🥑 Vegano-friendly</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Good+Market+R.+Guaiar%C3%A1+385+Jardins+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -364,7 +391,10 @@
           <div class="stop-time">11:30 AM · Trámite</div>
           <div class="stop-name">Consulado Argentino — Av. Paulista</div>
           <div class="stop-note">Llegar 15 minutos antes. La Paulista está a pasos — aprovechen el barrio después.</div>
-          <span class="stop-tag tag-cultura">📋 Gestión</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">📋 Gestión</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Consulado+Argentino+Avenida+Paulista+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -374,7 +404,10 @@
           <div class="stop-time">1:00 PM · Almuerzo</div>
           <div class="stop-name">Taste and See — Restaurante Vegano</div>
           <div class="stop-note">Comida casera brasilera 100% vegana. Feijoada vegana, yakisoba y un ambiente que parece casa de abuela. A pasos del consulado. Cierra viernes a las 4 PM.</div>
-          <span class="stop-tag tag-food">🌱 100% vegano</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-food">🌱 100% vegano</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Taste+and+See+Vegano+Alameda+Campinas+234+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -384,7 +417,10 @@
           <div class="stop-time">2:30 PM · Cultura</div>
           <div class="stop-name">MASP — Museu de Arte de São Paulo</div>
           <div class="stop-note">La fachada suspendida más icónica de Brasil sobre la Paulista. El viernes cierra a las 9 PM si quieren entrar. Si no, la arquitectura desde afuera ya es memorable.</div>
-          <span class="stop-tag tag-cultura">🎨 Museo</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">🎨 Museo</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=MASP+Museu+de+Arte+de+S%C3%A3o+Paulo+Av.+Paulista+1578" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -394,7 +430,10 @@
           <div class="stop-time">4:30 PM · Cultura</div>
           <div class="stop-name">Pinacoteca de São Paulo</div>
           <div class="stop-note">El museo de arte más querido de SP, en un edificio histórico del siglo XIX. Cierra a las 6 PM. Reserven al menos una hora adentro.</div>
-          <span class="stop-tag tag-cultura">🖼️ Museo · 4.8 ⭐</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">🖼️ Museo · 4.8 ⭐</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Pinacoteca+de+S%C3%A3o+Paulo+Pra%C3%A7a+da+Luz+2" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -404,7 +443,10 @@
           <div class="stop-time">8:00 PM · Cena & Vista</div>
           <div class="stop-name">Terraço Itália 🍸</div>
           <div class="stop-note">Piso 41, vista panorámica de 360° de toda SP. Coctelería clásica, atmósfera refinada. Reserva obligatoria en terracoitalia.com.br. Llevar a la suegra a este brinda puntos infinitos.</div>
-          <span class="stop-tag tag-vista">🌃 Vista + Cócteles · Luxury</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-vista">🌃 Vista + Cócteles · Luxury</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Terra%C3%A7o+It%C3%A1lia+Av.+Ipiranga+344+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -440,7 +482,10 @@
           <div class="stop-time">8:30 AM · Desayuno</div>
           <div class="stop-name">Mercado Municipal — Mercadão</div>
           <div class="stop-note">El edificio art nouveau más imponente del centro. Vitrales inmensos, frutas exóticas, especias y el ambiente del SP de otra época. El mejor lugar para arrancar el día histórico.</div>
-          <span class="stop-tag tag-cultura">🏛️ Patrimonio · Abre 6 AM</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">🏛️ Patrimonio · Abre 6 AM</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Mercado+Municipal+de+S%C3%A3o+Paulo+R.+da+Cantareira+306" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -450,7 +495,10 @@
           <div class="stop-time">10:00 AM · Mirador</div>
           <div class="stop-name">Sampa Sky 🏙️</div>
           <div class="stop-note">Mirador con pisos de vidrio transparente — la mejor vista del centro histórico desde las alturas. Comprar tickets online en sampasky.com.br. Sábados abre desde las 9 AM.</div>
-          <span class="stop-tag tag-vista">🔭 Mirador · Tickets online</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-vista">🔭 Mirador · Tickets online</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Sampa+Sky+Pra%C3%A7a+Pedro+Lessa+110+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -460,7 +508,10 @@
           <div class="stop-time">12:00 PM · Arquitectura</div>
           <div class="stop-name">Theatro Municipal de São Paulo</div>
           <div class="stop-note">Una de las obras más bellas de SP, inspirada en la Ópera Garnier de París. El sábado abre visitas de 10 AM a 4:20 PM. Desde el Viaduto do Chá al lado tienen la vista clásica del teatro sobre el Valle do Anhangabaú.</div>
-          <span class="stop-tag tag-cultura">🎭 Teatro · 4.8 ⭐</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">🎭 Teatro · 4.8 ⭐</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Theatro+Municipal+de+S%C3%A3o+Paulo+Pra%C3%A7a+Ramos+de+Azevedo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -470,7 +521,10 @@
           <div class="stop-time">1:00 PM · Cultura</div>
           <div class="stop-name">Catedral da Sé</div>
           <div class="stop-note">La catedral neogótica más grande de Brasil. Visita rápida pero imponente. Entrada gratuita. Zona con movimiento — guardar objetos de valor, hay presencia policial visible.</div>
-          <span class="stop-tag tag-cultura">⛪ Catedral · Gratis</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">⛪ Catedral · Gratis</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Catedral+da+S%C3%A9+Pra%C3%A7a+da+S%C3%A9+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -480,7 +534,10 @@
           <div class="stop-time">1:45 PM · Barrio</div>
           <div class="stop-name">Liberdade — Barrio Japonés 🏮</div>
           <div class="stop-note">A 5 minutos caminando de la Sé. Rua Galvão Bueno con faroles rojos, tiendas de anime, papelerías japonesas y panaderías de mochi. El barrio japonés más grande de Latinoamérica.</div>
-          <span class="stop-tag tag-cultura">🗾 Cultura japonesa</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">🗾 Cultura japonesa</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Liberdade+S%C3%A3o+Paulo+Rua+Galv%C3%A3o+Bueno" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -490,7 +547,10 @@
           <div class="stop-time">2:30 PM · Almuerzo</div>
           <div class="stop-name">Lamen Kazu</div>
           <div class="stop-note">El ramen más famoso de Liberdade. Pedir el ramen vegetariano (caldo de vegetales) para las veganas. Sábados abre desde las 11 AM. Suele haber cola — vale la espera.</div>
-          <span class="stop-tag tag-food">🍜 Ramen · 4.6 ⭐</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-food">🍜 Ramen · 4.6 ⭐</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Lamen+Kazu+R.+Thomaz+Gonzaga+87+Liberdade+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -500,7 +560,10 @@
           <div class="stop-time">4:30 PM · Arte Urbano</div>
           <div class="stop-name">Beco do Batman — Vila Madalena</div>
           <div class="stop-note">El callejón de murales más vibrante de SP. Arte urbano que cambia constantemente, ambiente relajado, cafés y bares al lado. Gratuito y abierto siempre. Uber desde Liberdade ~15 min.</div>
-          <span class="stop-tag tag-cultura">🎨 Arte urbano · Gratis</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">🎨 Arte urbano · Gratis</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Beco+do+Batman+R.+Medeiros+de+Albuquerque+Vila+Madalena+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -510,7 +573,10 @@
           <div class="stop-time">8:00 PM · Noche</div>
           <div class="stop-name">O Pasquim Bar e Prosa 🎶</div>
           <div class="stop-note">Bar con mucha onda en Vila Madalena. Música en vivo los sábados (frecuentemente samba), cócteles brasile&ntilde;os y petiscos. Ambiente íntimo y cálido, perfecto para los tres. Vuelta en Uber sin problema.</div>
-          <span class="stop-tag tag-bar">🍹 Samba en vivo · Vila Madalena</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-bar">🍹 Samba en vivo · Vila Madalena</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=O+Pasquim+Bar+e+Prosa+R.+Aspicuelta+524+Vila+Madalena+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -548,7 +614,10 @@
           <div class="stop-time">9:00 AM · Brunch</div>
           <div class="stop-name">Botanikafé Jardins ☕🌿</div>
           <div class="stop-note">Brunch rodeado de plantas tropicales en pleno Jardins. Opciones saludables, gluten free y veganas. El ambiente es uno de los más hermosos de SP — el cierre perfecto del fin de semana. Abre desde las 8 AM.</div>
-          <span class="stop-tag tag-food">🌿 Vegano-friendly · 4.4 ⭐</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-food">🌿 Vegano-friendly · 4.4 ⭐</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Botanikaf%C3%A9+Jardins+Alameda+Lorena+1765+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -558,7 +627,10 @@
           <div class="stop-time">12:00 PM · Partida</div>
           <div class="stop-name">Terminal Rodoviário Tietê 🚌</div>
           <div class="stop-note">Check-out del hotel y Uber directo al Tietê. El viaje desde Jardins tarda entre 20 y 40 minutos según el tráfico dominical. ¡Buen viaje de vuelta a Ubatuba!</div>
-          <span class="stop-tag tag-cultura">🚌 Terminal · Uber desde el hotel</span>
+          <div class="stop-footer">
+            <span class="stop-tag tag-cultura">🚌 Terminal · Uber desde el hotel</span>
+            <a class="gmaps-btn" href="https://maps.google.com/?q=Terminal+Rodovi%C3%A1rio+Tiet%C3%AA+S%C3%A3o+Paulo" target="_blank">🗺️ Ver en Google Maps</a>
+          </div>
         </div>
       </div>
 
@@ -581,6 +653,7 @@
   Itinerario creado con ❤️ · São Paulo · Viernes a Domingo · 🌱 Apto vegano
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
   // ── Colores por día ──
   const COLORS = { 1: '#1a6b4a', 2: '#b5451b', 3: '#2563a8' };
@@ -640,10 +713,12 @@
   }
 
   function initMap(dayNum) {
-    if (maps[dayNum]) return; // ya inicializado
+    if (maps[dayNum]) return;
+    const container = document.getElementById('map' + dayNum);
+    if (!container) return;
     const cfg = DAYS[dayNum];
     const color = COLORS[dayNum];
-    const m = L.map('map' + dayNum, { zoomControl: true, scrollWheelZoom: false })
+    const m = L.map(container, { zoomControl: true, scrollWheelZoom: false })
                .setView(cfg.center, cfg.zoom);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -677,8 +752,8 @@
     }, 50);
   }
 
-  // Inicializar día 1 al cargar
-  window.addEventListener('load', () => { initMap(1); });
+  // Inicializar día 1 cuando el DOM esté listo
+  document.addEventListener('DOMContentLoaded', () => { initMap(1); });
 </script>
 </body>
 </html>
